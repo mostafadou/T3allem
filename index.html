@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T3allem V5</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">📚 T3allem</div>
+  <button id="sound" aria-label="الصوت">🔊</button>
+</header>
+
+<main id="app">
+  <section id="home" class="screen active">
+    <div class="hero">
+      <div class="characters">👦🏻 👧🏻 🐱 🐦</div>
+      <h1>مرحبًا بك في T3allem</h1>
+      <p>تعلّم، جرّب، وتقدّم خطوة بخطوة.</p>
+      <button class="primary" id="start">ابدأ التعلم 🚀</button>
+    </div>
+  </section>
+
+  <section id="levels" class="screen">
+    <h2>اختر مستواك</h2>
+    <div class="grid" id="levelGrid"></div>
+    <button class="back" data-back="home">↩ العودة</button>
+  </section>
+
+  <section id="subjects" class="screen">
+    <h2 id="levelTitle">المواد</h2>
+    <p class="hint">اختر مادة للمتابعة.</p>
+    <div class="grid" id="subjectGrid"></div>
+    <button class="back" data-back="levels">↩ العودة</button>
+  </section>
+
+  <section id="assessment" class="screen">
+    <div class="card">
+      <h2 id="assessmentTitle">تقييم المستوى</h2>
+      <p id="assessmentInfo">اختبار قصير يساعدك على معرفة ما أتقنته وما يحتاج إلى مزيد من التدريب.</p>
+      <button class="primary" id="beginQuiz">ابدأ التقييم</button>
+    </div>
+    <button class="back" data-back="subjects">↩ العودة</button>
+  </section>
+
+  <section id="quiz" class="screen">
+    <div class="quiz-card">
+      <div class="progress"><span id="progress"></span></div>
+      <h2 id="question"></h2>
+      <div id="answers"></div>
+      <p id="feedback"></p>
+    </div>
+  </section>
+
+  <section id="result" class="screen">
+    <div class="result-card">
+      <div id="resultEmoji">🌟</div>
+      <h2 id="resultTitle"></h2>
+      <p id="resultText"></p>
+      <button class="primary" data-back="subjects">اختيار مادة أخرى</button>
+    </div>
+  </section>
+</main>
+
+<div class="encourage" id="encourage">أحسنت! واصل 👏</div>
+<script src="app.js"></script>
+</body>
+</html>
